@@ -1,16 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Globalization;
 
 namespace Projekt
 {
     internal class Player
     {
+        #region Datatypes
         private string name;
         private int level;
         private double hs_percent;
         private string rank; // "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Ascendant" 
         private bool has_mic;
-
         private Dictionary<int, string> ranks = new Dictionary<int, string>
         {
             { 1, "Bronze" },
@@ -20,7 +20,9 @@ namespace Projekt
             { 5, "Diamond" },
             { 6, "Ascendant" }
         };
+        #endregion
 
+        #region Constructors
         public Player(string name, int level, double hs_percent, string rank, bool has_mic)
         {
             this.name = name;
@@ -40,7 +42,9 @@ namespace Projekt
             this.rank = data[3];
             this.has_mic = bool.Parse(data[4]);
         }
+        #endregion
 
+        #region Properties
         public string Has_mic { 
             get
             {
@@ -52,14 +56,17 @@ namespace Projekt
         {
             set
             {
-                if (!ranks.ContainsValue(this.rank)) return;
+                if (!ranks.ContainsValue(value)) return;
                 this.rank = value;
             }
         }
 
         public double Hs_percent { get => hs_percent; }
         public int Level { get => level; }
+        public string Name { get => name; }
+        #endregion
 
+        #region Methods
         public void IncreaseLevel(int amount)
         {
             if (amount > 0 && amount <= 5)
@@ -70,11 +77,7 @@ namespace Projekt
 
         public bool IsSmurf()
         {
-            if (this.level >= 20 && this.level <= 40)
-            {
-                return IsAbove("Diamond");   
-            }
-
+            if (this.level >= 20 && this.level <= 40) return IsAbove("Diamond");
             return false;
         }
 
@@ -103,10 +106,11 @@ namespace Projekt
             else if (this.hs_percent >= 20) return "Jó";
             else return "Gyakorlás szükséges";
         }
-
+        
         public override string ToString()
         {
             return $"{name} - Level {level} | Rank: {rank} | HS: {hs_percent}% - {HsCategory()} | VC: {Has_mic}";
         }
+        #endregion
     }
 }
