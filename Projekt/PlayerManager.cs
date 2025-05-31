@@ -32,35 +32,48 @@ namespace Projekt
             }
         }
 
-        public Player GetExtremeValue(bool highest)
+        public bool ChangeCurrent(int i, int ind)
         {
-            int ind = 0;
+            return players[i].Hs_percent < players[ind].Hs_percent;
+        }
 
+        public Player Max()
+        {
+            int maxi = 0;
             for (int i = 0; i < players.Count; i++)
             {
-                if (!highest && (players[i].Hs_percent < players[ind].Hs_percent) 
-                    || highest && (players[i].Hs_percent > players[ind].Hs_percent)) ind = i; //ChangeCurrent
+                if (players[i].Level > players[maxi].Level)
+                {
+                    maxi = i;
+                }
             }
+            return players[maxi];
+        }
 
+        public Player GetExtremeValue(bool highest, int j, ref int ind)
+        {
+            for (int i = j; i < players.Count; i++)
+            {
+                if ((!highest && ChangeCurrent(ind, i)) || (highest && ChangeCurrent(i, ind)))
+                {
+                    ind = i;
+                }
+            }
             return players[ind];
         }
 
-        //public void Sort()
-        //{
-        //    List<Player> lst = new List<Player>(players);
+        public void Sort(string m)
+        {
+            List<Player> lst = new List<Player>(players);
 
-        //    for (int i = 0; i < lst.Count; i++)
-        //    {
-        //        int ind = i;
-        //        for (int j = i + 1; j < lst.Count; j++)
-        //        {
-        //            if (lst[j] < lst[ind])
-        //            {
-        //                ind = j;
-        //            }
-        //        }
-        //        (lst[i], lst[ind]) = (lst[ind], lst[i])
-        //    }
-        //}
+            for (int i = 0; i < lst.Count; i++)
+            {
+                int ind = i;
+                GetExtremeValue(m == "max", i, ref ind);
+
+                (lst[i], lst[ind]) = (lst[ind], lst[i]);
+            }
+        }
+
     }
 }

@@ -13,6 +13,7 @@ namespace Projekt
             //Console.WriteLine(p1.HsCategory() + "\n");
 
             Console.WriteLine(p1);
+
             Console.WriteLine(p1.IsSmurf());
 
             PlayerManager pm = new PlayerManager();
@@ -21,7 +22,8 @@ namespace Projekt
 
             Console.WriteLine();
 
-            Console.WriteLine(pm.GetExtremeValue(false));
+            Console.WriteLine(pm.Max());
+            pm.Sort("max");
 
             //Console.WriteLine(pm.Sort(true));
         }
