@@ -11,7 +11,7 @@ namespace Projekt
         private double hs_percent;
         private string rank; // "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Ascendant" 
         private bool has_mic;
-        private Dictionary<int, string> ranks = new Dictionary<int, string>
+        public static Dictionary<int, string> ranks = new Dictionary<int, string>
         {
             { 1, "Bronze" },
             { 2, "Silver" },

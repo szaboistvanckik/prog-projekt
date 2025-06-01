@@ -53,6 +53,9 @@ namespace Projekt
             Console.WriteLine("\n10. Rendezés szint szerint (növekvő):");
             pm.SortByLevel(true);
             pm.WriteData();
+
+            // 11. INSERT INTO generálás
+            pm.General("database.sql");
         }
     }
 }

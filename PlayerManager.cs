@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
+using System.Reflection.Emit;
+using System.Xml.Linq;
 
 namespace Projekt
 {
@@ -72,6 +75,33 @@ namespace Projekt
 
                 (players[i], players[target]) = (players[target], players[i]);
             }
+        }
+
+        public void General(string fajlnev)
+        {
+            StreamReader sr = new StreamReader("names.txt");
+            string[] names = sr.ReadLine().Split(';');
+            sr.Close();
+
+            Random r = new Random();
+            StreamWriter sw = new StreamWriter(fajlnev);
+            sw.WriteLine("USE PlayerManager;");
+            sw.WriteLine("DELETE FROM Players;\n");
+            sw.WriteLine("INSERT INTO Players(name, level, hs_percent, rank, has_mic) VALUES");
+
+            for (int i = 0; i < names.Length; i++)
+            {
+                string name = names[i];
+                int level = r.Next(20, 201);
+                double hs_percent = Math.Round(5 + r.NextDouble() * (60 - 5), 2);
+                string rank = Player.ranks[r.Next(1, 7)];
+                bool mic = r.Next(2) == 1;
+                string end = (i == names.Length - 1) ? ";" : ",";
+
+                sw.WriteLine($"('{name}', {level}, {hs_percent}, '{rank}', {mic.ToString().ToLower()}){end}");
+            }
+
+            sw.Close();
         }
         #endregion
     }
