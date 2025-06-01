@@ -42,8 +42,7 @@ namespace Projekt
 
             // 8. Fájlbeolvasás
             PlayerManager pm = new PlayerManager();
-            pm.FajlbolOlvas("players.txt"); //players.txt --> double-ok (","-vel való elválasztása)
-                                            //playerseng.txt --> double-ok ("."-al való elválasztása)
+            pm.FajlbolOlvas("../../players.txt"); //players.txt --> double-ok (","-vel való elválasztása)
 
             // 9. Legmagasabb HS%-os játékos (HS% --> Headshot% --> Fejlövések aránya százalékban)
             Console.WriteLine("\n9. Legmagasabb HS%-os játékos:");
@@ -55,7 +54,7 @@ namespace Projekt
             pm.WriteData();
 
             // 11. INSERT INTO generálás
-            pm.General("database.sql");
+            pm.General("adatok.sql");
         }
     }
 }

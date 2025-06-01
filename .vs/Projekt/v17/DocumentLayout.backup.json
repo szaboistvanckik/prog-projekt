@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mopsz\\Desktop\\prog-projekt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{34E91189-C930-4ABF-A50B-4BCA8478AB15}|Projekt.csproj|c:\\users\\mopsz\\desktop\\prog-projekt\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E91189-C930-4ABF-A50B-4BCA8478AB15}|Projekt.csproj|solutionrelative:playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E91189-C930-4ABF-A50B-4BCA8478AB15}|Projekt.csproj|c:\\users\\mopsz\\desktop\\prog-projekt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E91189-C930-4ABF-A50B-4BCA8478AB15}|Projekt.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34E91189-C930-4ABF-A50B-4BCA8478AB15}|Projekt.csproj|c:\\users\\mopsz\\desktop\\prog-projekt\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34E91189-C930-4ABF-A50B-4BCA8478AB15}|Projekt.csproj|solutionrelative:player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\mopsz\\Desktop\\prog-projekt\\Player.cs",
+              "RelativeDocumentMoniker": "Player.cs",
+              "ToolTip": "C:\\Users\\mopsz\\Desktop\\prog-projekt\\Player.cs",
+              "RelativeToolTip": "Player.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:32:28.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "C:\\Users\\mopsz\\Desktop\\prog-projekt\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "PlayerManager.cs",
+              "ToolTip": "C:\\Users\\mopsz\\Desktop\\prog-projekt\\PlayerManager.cs",
+              "RelativeToolTip": "PlayerManager.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAlwF0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:32:26.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mopsz\\Desktop\\prog-projekt\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\mopsz\\Desktop\\prog-projekt\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAtwCwAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-01T16:32:24.654Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

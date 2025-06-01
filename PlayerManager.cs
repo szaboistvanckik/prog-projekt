@@ -79,12 +79,12 @@ namespace Projekt
 
         public void General(string fajlnev)
         {
-            StreamReader sr = new StreamReader("names.txt");
+            StreamReader sr = new StreamReader("../../names.txt");
             string[] names = sr.ReadLine().Split(';');
             sr.Close();
 
             Random r = new Random();
-            StreamWriter sw = new StreamWriter(fajlnev);
+            StreamWriter sw = new StreamWriter($"../../{fajlnev}");
             sw.WriteLine("USE PlayerManager;");
             sw.WriteLine("DELETE FROM Players;\n");
             sw.WriteLine("INSERT INTO Players(name, level, hs_percent, rank, has_mic) VALUES");
